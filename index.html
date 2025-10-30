@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <!-- Animated GitHub corner (place near top of <body>) -->
+<a class="github-link" href="https://github.com/CodeWithSahilShaikh" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub">
+  <!-- GitHub mark (SVG) -->
+  <svg class="github-icon" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M12 .297a12 12 0 00-3.794 23.4c.6.11.82-.26.82-.58 0-.29-.01-1.04-.02-2.04-3.338.73-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.758-1.333-1.758-1.09-.746.083-.73.083-.73 1.205.086 1.84 1.238 1.84 1.238 1.07 1.835 2.809 1.305 3.495.998.11-.776.418-1.305.762-1.606-2.665-.304-5.467-1.333-5.467-5.93 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 016 0c2.29-1.552 3.297-1.23 3.297-1.23.654 1.652.242 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.815 1.1.815 2.22 0 1.6-.014 2.887-.014 3.28 0 .32.216.7.825.58A12 12 0 0012 .297"></path>
+  </svg>
+  <span class="github-badge">View on GitHub</span>
+</a>
+    <h1 class="app-title">Real Time Digital Clock</h1>
+  </header>
+      <p class="timezone">Local Time Zone: <span id="timezone-label"></span></p>
+
+  <main>
+    <section class="clock-container">
+      <div class="time">
+        <span class="hours">00</span>
+        <span class="separator">:</span>
+        <span class="minutes">00</span>
+        <span class="separator sec-separator">:</span>
+        <span class="seconds">00</span>
+        <span class="ampm">AM</span>
+      </div>
+
+      <div class="date">
+        <span class="weekday">Monday</span>,
+        <span class="day">01</span>
+        <span class="month">January</span>
+        <span class="year">2025</span>
+      </div>
+
+      <div class="controls">
+        <button id="format-toggle" aria-pressed="false">24H</button>
+        <button id="theme-toggle" aria-pressed="false">🌙</button>
+        <button id="settings-btn" aria-haspopup="true" aria-controls="settings-panel">⚙️</button>
+      </div>
+    </section>
+
+    <aside id="settings-panel" class="hidden" aria-hidden="true">
+      <h2>Settings</h2>
+      <label>
+        <input type="checkbox" id="show-seconds" checked />
+        Show Seconds
+      </label>
+      <label>
+        <input type="checkbox" id="sound-toggle" />
+        Tick Sound
+      </label>
+      <button id="close-settings">Close</button>
+    </aside>
+  </main>
+
+  <footer>
+      <div class="madeby">
+    <span class="madeby-prefix">Crafted with</span>
+    <span class="brain">🧠</span>
+    <span class="madeby-name">by <strong>Sahil</strong></span>
+  </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
